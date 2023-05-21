@@ -8,11 +8,24 @@
     <script src="tabs.js"></script>
     <script src="SearchString.js"></script>
     <script src="favouriteCityList.js"></script>
+    <script type="module" src="login.js"></script>
 </head>
 <body>
 
 
 <div style="border: 2px solid black; width: available; background: darkgrey">
+    <div id="profile-container" class="wrap">
+        <form style="width: available; margin-left: 1%; margin-right: 1%;
+            border: 2px solid black; border-radius: 10px; width: 10%; background: darkgrey"
+            onsubmit="Login(); return false">
+            <div class="wrap column">
+                Логин <input id="login" style="width: 90%; border: none">
+                Пароль <input id="password" type="password" style="width: 90%; border: none">
+            </div>
+            <button style="position: relative; left: 5px;" type="submit">Войти</button>
+        </form>
+        <div class="wrap column" id="profile"></div>
+    </div>
     <form style="width: available; margin-left: 1%; margin-right: 1%"
           onsubmit="getMainCityInf(document.getElementById('cityName').value); return false">
       <input id="cityName" style="width: 90%; border: none">
